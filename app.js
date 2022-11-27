@@ -10,7 +10,6 @@ const CONNECTION_STRING =
   "mongodb+srv://britney:dyK65b0z7UOPYdc0@cluster0.eaq3hdp.mongodb.net/?retryWrites=true&w=majority" ||
   "mongodb://localhost:27017/tuiter";
 mongoose.connect(CONNECTION_STRING);
-mongoose.connect("mongodb://localhost:27017/tuiter");
 const app = express();
 app.use(express.json());
 app.use(cors());
