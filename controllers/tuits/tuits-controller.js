@@ -4,7 +4,12 @@ const createTuit = async (req, res) => {
   const newTuit = req.body;
   newTuit.likes = 0;
   newTuit.liked = false;
+  newTuit.image = "nasa.png";
+  newTuit.handle = "@nasa";
+  newTuit.username = "NASA";
+  newTuit.time = new Date().getHours().toString() + "h";
   const insertedTuit = await tuitsDao.createTuit(newTuit);
+  console.log(insertedTuit);
   res.json(insertedTuit);
 };
 
