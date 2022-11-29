@@ -7,9 +7,9 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 
 const CONNECTION_STRING =
-  "mongodb+srv://britney:dyK65b0z7UOPYdc0@cluster0.eaq3hdp.mongodb.net/?retryWrites=true&w=majority" ||
+  "mongodb+srv://britney:dyK65b0z7UOPYdc0@cluster0.eaq3hdp.mongodb.net/tuiter?retryWrites=true&w=majority" ||
   "mongodb://localhost:27017/tuiter";
-mongoose.connect(CONNECTION_STRING);
+mongoose.connect(CONNECTION_STRING).then(() => console.log("connected!"));
 const app = express();
 app.use(express.json());
 app.use(cors());
